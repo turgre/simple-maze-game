@@ -1,6 +1,11 @@
 import maze
 
 def move(player_row, player_col, direction):
+    """Return and new row and column for the player based on 1) the direction
+    the player wishes to move and 2) if that space is a valid space for the
+    player to be in the maze.
+    """
+
     # Do not change player loc if move is invalid
     if not maze.is_valid_move(player_row, player_col, direction):
         return [player_row, player_col]
@@ -16,6 +21,8 @@ def move(player_row, player_col, direction):
         return [player_row, player_col + 1]
 
 def play_game():
+    """Starts the maze game.
+    """
 
     print("Welcome to the maze.")
     print("Move the P to the E space.")
